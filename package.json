@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "node api/index.js"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "mqtt": "^4.3.7"
