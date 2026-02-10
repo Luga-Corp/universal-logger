@@ -34,8 +34,8 @@ app.get('/reset', (req, res) => {
     res.json({ status: "success", message: "Reset command sent" });
 });
 
+app.listen(3000, () => console.log('Server API jalan di port 3000'));
 // Export untuk Vercel
 module.exports = app;
 
 // Jalankan lokal untuk tes: node index.js (uncomment line bawah)
-// app.listen(3000, () => console.log('Server API jalan di port 3000'));
