@@ -17,19 +17,19 @@ client.on('connect', () => {
 });
 
 // Endpoint: Error (Buzzer 6x)
-app.get('/api/error', (req, res) => {
+app.get('/error', (req, res) => {
     client.publish('mappi32/api/perintah', 'Alarm 6');
     res.json({ status: "success", message: "Error command sent: Buzzer 6x" });
 });
 
 // Endpoint: Warning (LED Pin 14 selama 30 menit)
-app.get('/api/warning', (req, res) => {
+app.get('/warning', (req, res) => {
     client.publish('mappi32/api/perintah', 'WARNING_ON');
     res.json({ status: "success", message: "Warning command sent: LED 14 for 30m" });
 });
 
 // Endpoint: Reset (Instruksi ke Mappi untuk bersihkan status)
-app.get('/api/reset', (req, res) => {
+app.get('/reset', (req, res) => {
     client.publish('mappi32/api/perintah', 'RESET');
     res.json({ status: "success", message: "Reset command sent" });
 });
